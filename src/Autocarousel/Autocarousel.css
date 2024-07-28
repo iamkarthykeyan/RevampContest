@@ -1,0 +1,111 @@
+@keyframes rotate-y {
+    0%, 100% {
+      transform: translateY(0%) scale(1.2);
+      filter: opacity(1);
+      z-index: 2;
+    }
+    12.5% {
+      transform: translateY(40%);
+      filter: blur(0px) opacity(.2);
+    }
+    25% {
+      transform: translateY(50%) scale(.8);
+      filter: blur(2px) opacity(.2);
+    }
+    37.5% {
+      transform: translateY(40%) scale(.65);
+      filter: blur(4px) opacity(.2);
+      z-index: -1;
+    }
+    50% {
+      transform: translateY(0%) scale(.5);
+      filter: blur(8px) opacity(.2);
+      z-index: -1;
+    }
+    62.5% {
+      transform: translateY(-40%) scale(.65);
+      filter: blur(4px) opacity(.2);
+      z-index: -1;
+    }
+    75% {
+      transform: translateY(-50%) scale(.8);
+      filter: blur(2px) opacity(.2);
+    }
+    87.5% {
+      transform: translateY(-40%);
+      filter: blur(0px) opacity(.2);
+      z-index: 2;
+    }
+  }
+  
+  .auto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-weight: bold;
+    font-family: system-ui;
+  }
+  .word-rotate-y {
+    height: 12em;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .word-rotate-y > li {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+    filter: opacity(0);
+    animation: rotate-y 32s infinite cubic-bezier(.7,.2,0,1);
+    text-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  /* values are neg so that it is already playing once loaded */
+  .word-rotate-y > li:nth-child(2) {
+    animation-delay: -4s;
+  }
+  .word-rotate-y > li:nth-child(3) {
+    animation-delay: -8s;
+  }
+  .word-rotate-y > li:nth-child(4) {
+    animation-delay: -12s;
+  }
+  .word-rotate-y > li:nth-child(5) {
+    animation-delay: -16s;
+  }
+  .word-rotate-y > li:nth-child(6) {
+    animation-delay: -20s;
+  }
+  .word-rotate-y > li:nth-child(7) {
+    animation-delay: -24s;
+  }
+  .word-rotate-y > li:nth-child(8) {
+    animation-delay: -28s;
+  }
+
+/* Base styles */
+ul.word-rotate-y {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+ul.word-rotate-y li {
+  font-size: 20px;
+}
+
+@media (min-width: 1024px) { 
+  ul.word-rotate-y li {
+    padding-right: 15%;
+  }
+}
