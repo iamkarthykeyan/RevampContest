@@ -9,6 +9,20 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.login-button {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+  }
+  
+  .login-button button {
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+  }
+
 .banner{
     width: 100vw;
     height: 100vh;
